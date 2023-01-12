@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Управление аквариумом</title>
+	<link rel="icon" type="image/png" href="/favicon.png">
+	<script src="eel.js"></script>
+
+	<link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+	<br/>
+	<div class="container-lg">
+		<div class="row">
+			<div class="col-md-12 text-center" id="vasya"><h5>Статус:</h5></div>
+		</div>
+		<div class="row text-center">
+			<div class="col-md-6 col-xs-12">Время:</div>
+			<div class="col-md-6 col-xs-12"><span class="badge bg-success"><i>20:38 01.01.2023</i></span></div>
+		</div>
+		<div class="row text-center">
+			<div class="col-md-6 col-xs-12">Управление</div>
+			<div class="col-md-6 col-xs-12">Авто/Ручное</div>
+		</div>
+		<div class="row text-center">
+			<div class="col-md-6 col-xs-12">На данный момент:</div>
+			<div class="col-md-6 col-xs-12">Вкл/Откл</div>
+		</div>
+		<div class="row text-center">
+			<div class="col-md-6 col-xs-12">Время включения(рассвет):</div>
+			<div class="col-md-6 col-xs-12">11:00(15)</div>
+		</div>
+		<div class="row text-center">
+			<div class="col-md-6 col-xs-12">Время отключения(закат):</div>
+			<div class="col-md-6 col-xs-12">21:00(15)</div>
+		</div>
+		<div class="row text-center">
+			<div class="col-md-6 col-xs-12">Яркость:</div>
+			<div class="col-md-6 col-xs-12">80%</div>
+		</div>
+		<hr/>
+		<div class="row">
+			<div class="col-md-12 col-xs-12 text-center">
+				<h5>Режим:</h5>
+			</div>
+			<div class="col-md-6 text-center">
+				<input type="radio" class="btn-check" name="options-outlined" id="success-outlined" autocomplete="off" checked>
+				<label class="btn btn-outline-success" for="success-outlined">Авто</label>
+			</div>
+			<div class="col-md-6 text-center">
+				<input type="radio" class="btn-check" name="options-outlined" id="danger-outlined" autocomplete="off">
+			<label class="btn btn-outline-danger" for="danger-outlined">Ручной</label>
+			</div>	
+		</div>
+		<hr/>		
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<h5>Автоматический режим</h5>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="input-group mb-3">
+				  <span class="input-group-text">Время включения</span>
+				  <input type="time" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div class="input-group mb-3">
+				  <label class="input-group-text" for="inputGroupSelect01">Рассвет</label>
+				  <select class="form-select" id="inputGroupSelect01">
+				    <option value="0" selected>Нет</option>
+				    <option value="5">5 мин.</option>
+				    <option value="10">10 мин.</option>
+				    <option value="15">15 мин.</option>
+				  </select>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div class="input-group mb-3">
+				  <span class="input-group-text">Время отключения</span>
+				  <input type="time" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="input-group mb-3">
+				  <label class="input-group-text" for="inputGroupSelect01">Закат</label>
+				  <select class="form-select" id="inputGroupSelect01">
+				    <option value="0" selected>Нет</option>
+				    <option value="5">5 мин.</option>
+				    <option value="10">10 мин.</option>
+				    <option value="15">15 мин.</option>
+				  </select>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3 col-xs-12">
+				<label for="customRange1" class="form-label">Яркость</label>
+			</div>
+			<div class="col-md-9 col-xs-12">
+				<input type="range" class="form-range" id="customRange1" value="80">
+			</div>
+		</div>
+		<hr/>
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<h5>Ручное управление</h5>
+			</div>
+		</div>	
+		<div class="row">
+			<div class="col-md-2 col-xs-12">
+				<div class="form-check form-switch">
+				  <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+				  <label class="form-check-label" for="flexSwitchCheckChecked">Откл/Вкл</label>
+				</div>
+			</div>
+			<div class="col-md-1 col-xs-12">
+				<label for="customRange1" class="form-label">Яркость</label>
+			</div>
+			<div class="col-md-9 col-xs-12">
+				<input type="range" class="form-range" id="customRange1" value="80">
+			</div>
+		</div>
+		<hr/>
+		<div class="row">
+			<div class="col">
+				<br/>
+				<br/>
+				<br/>
+				<br/>
+				<br/>
+				<div class="spinner-border" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/jquery.js"></script>
+	<script src="js/myscript.js"></script>
+</body>
+</html>
